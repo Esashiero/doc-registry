@@ -1,0 +1,24 @@
+# docs.yaml — curated doc registry for Hermes agents
+# Copy this file to ~/.hermes/skills/doc-registry/docs.yaml and edit.
+#
+# This file tells Hermes where your important docs live so that when you ask
+# "search in the docs" the agent searches the right places first.
+
+apps:
+  - name: example-api
+    description: "Example API — OpenAPI spec and deployment notes"
+    paths:
+      - ~/projects/example-api/docs/openapi.yaml
+      - ~/projects/example-api/README.md
+
+  - name: example-frontend
+    description: "Example React frontend — component docs and architecture"
+    paths:
+      - ~/projects/example-frontend/docs/architecture.md
+      - ~/projects/example-frontend/storybook-static/index.html
+
+# Optional: which apps to search when the user says "search in the docs"
+# without naming a specific one. Remove this section if you always name an app.
+# default_apps:
+#   - example-api
+#   - example-frontend
